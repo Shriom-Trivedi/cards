@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	card  := "Ace of Spades"
-	fmt.Println(card)
+	cards := newDeck()
+
+	hand, remainingDeck := deal(cards, 3)
+
+	fmt.Println("hand:", hand, "\nremainingDeck", remainingDeck)
 }
